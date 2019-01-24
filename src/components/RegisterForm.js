@@ -14,13 +14,12 @@ class RegisterForm extends React.Component {
       businessName: 'Business name',
       password: 'Password'
     };
-
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleInputChange(event) {
     const target = event.target;
-    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const value = target.value;
     const name = target.name;
 
     this.setState({
@@ -28,26 +27,77 @@ class RegisterForm extends React.Component {
     });
   }
 
+  handleSubmit(event) {
+    alert('You have been registered: ' + this.state.value);
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <label>
-          Is going:
+          First name
           <input
-            name="isGoing"
-            type="checkbox"
-            checked={this.state.isGoing}
-            onChange={this.handleInputChange} />
+                name="firstName"
+                type="text"
+                value={this.state.firstName}
+                onChange={this.handleInputChange} />
         </label>
-        <br />
+
         <label>
-          Number of guests:
+          Last name
           <input
-            name="numberOfGuests"
-            type="number"
-            value={this.state.numberOfGuests}
-            onChange={this.handleInputChange} />
+                name="lastName"
+                type="text"
+                value={this.state.lastName}
+                onChange={this.handleInputChange} />
         </label>
+
+        <label>
+          Phone or Email
+          <input
+                name="phone"
+                type="number"
+                value={this.state.phone}
+                onChange={this.handleInputChange} />
+        </label>
+
+        <label>
+          Email address
+          <input
+                name="email"
+                type="email"
+                value={this.state.email}
+                onChange={this.handleInputChange} />
+        </label>
+
+        <label>
+          Date of Birth
+          <input
+                name="dob"
+                type="date"
+                value={this.state.dob}
+                onChange={this.handleInputChange} />
+        </label>
+
+        <label>
+          Business Name
+          <input
+                name="businessName"
+                type="text"
+                value={this.state.businessName}
+                onChange={this.handleInputChange} />
+        </label>
+
+        <label>
+          Password
+          <input
+                name="password"
+                type="password"
+                value={this.state.password}
+                onChange={this.handleInputChange} />
+        </label>
+        <input type="submit" value="Register" />
       </form>
     );
   }

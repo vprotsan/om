@@ -8,21 +8,22 @@ class LoginForm extends Component {
         loginValue: 'Email or Phone',
         passwordValue: ''
       };
-      this.handleLoginChange = this.handleLoginChange.bind(this);
-      this.handlePasswordChange = this.handlePasswordChange.bind(this);
+      this.handleInputChange = this.handleInputChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleLoginChange(event) {
-    this.setState({loginValue: event.target.value});
-  }
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
 
-  handlePasswordChange(event) {
-    this.setState({passwordValue: event.target.value});
+    this.setState({
+      [name]: value
+    });
   }
 
   handleSubmit(event) {
-    alert('An essay was submitted: ' + this.state.value);
+    alert('Logged in: ' + this.state.value);
     event.preventDefault();
   }
 
@@ -31,18 +32,24 @@ class LoginForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Email or Phone
-          <input type="text" value={this.state.loginValue} onChange={this.handleLoginChange} />
+          <input
+              type="text"
+              name="loginValue"
+              value={this.state.loginValue}
+              onChange={this.handleInputChange} />
         </label>
         <label>
           Password
-          <input type="password" value={this.state.passwordValue} onChange={this.handlePasswordChange} />
+          <input
+              type="password"
+              name="passwordValue"
+              value={this.state.passwordValue}
+              onChange={this.handleInputChange} />
         </label>
         <input type="submit" value="Login" />
       </form>
     );
   }
-
-
 }
 
 export default LoginForm;
