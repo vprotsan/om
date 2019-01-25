@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Grid from 'react-css-grid';
 
 
 class RegisterForm extends React.Component {
@@ -34,6 +35,7 @@ class RegisterForm extends React.Component {
 
   render() {
     return (
+
       <form onSubmit={this.handleSubmit}>
         <label>
           First name

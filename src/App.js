@@ -7,17 +7,15 @@ import {
 import styled from 'styled-components'
 import HeaderContainer from './components/HeaderContainer';
 import MainWrapper from './components/MainWrapper';
+import Grid from 'react-css-grid'
 
-const styledVal = styled.p`
-
-`
 
 class App extends Component {
 
   constructor(props) {
       super(props);
       this.state = {
-        isLogged: false
+        isLogged: true
       };
       this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -41,6 +39,7 @@ class App extends Component {
 
     return(
       <BrowserRouter>
+
           <div className="main-container">
             <HeaderContainer  handleSubmit = {this.handleSubmit}
                               handleInputChange = {this.handleInputChange}

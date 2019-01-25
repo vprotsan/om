@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import RegisterForm from './registerForm/RegisterForm';
+import Grid from 'react-css-grid'
 
 const MainContainer = (props) => {
 
     return(
-      <div>
-        <RegisterForm/>
-      </div>
+      <Grid
+          width={320}
+          gap={24}>
+          <div></div>
+          <div></div>
+          <div><RegisterForm/></div>
+      </Grid>
     )
 }
 
