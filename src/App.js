@@ -1,19 +1,23 @@
 import React, { Component } from 'react';
+import {
+  BrowserRouter,
+  Route,
+  Switch
+} from 'react-router-dom';
 import styled from 'styled-components'
-import HeaderContainer from './components/Header';
+import HeaderContainer from './components/HeaderContainer';
 import MainWrapper from './components/MainWrapper';
-import Home from './components/Header';
 
 const styledVal = styled.p`
 
 `
 
-class App extends Component(){
+class App extends Component {
 
   constructor(props) {
       super(props);
       this.state = {
-        isLogged: false
+        isLogged: true
       };
       this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -36,14 +40,16 @@ class App extends Component(){
   render(){
 
     return(
-        <div className="main-container">
-          <HeaderContainer  handleSubmit = {this.handleSubmit}
-                            handleInputChange = {this.handleInputChange}
-                            isLoggedIn = {this.state.isLogged}
+      <BrowserRouter>
+          <div className="main-container">
+            <HeaderContainer  handleSubmit = {this.handleSubmit}
+                              handleInputChange = {this.handleInputChange}
+                              isLoggedIn = {this.state.isLogged}
 
-          />
-          <MainWrapper isLoggedIn = {this.state.isLogged}/>
-        </div>
+            />
+            <MainWrapper isLoggedIn = {this.state.isLogged}/>
+          </div>
+      </BrowserRouter>
     )
   }
 }

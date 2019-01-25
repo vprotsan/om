@@ -3,17 +3,18 @@ import styled from 'styled-components';
 import LoginForm from './LoginForm';
 import LoggedIn from './LoggedIn';
 
-const HeaderContainer = (porps) => {
-  render(){
+const HeaderContainer = (props) => {
+
     return(
       <div>
         {props.isLoggedIn ?
           <LoggedIn/> :
           <LoginForm handleSubmit = {props.handleSubmit}
-                    handleInputChange = {props.handleInputChange} />}
+                     handleInputChange = {props.handleInputChange} />
+        }
       </div>
     )
-  }
+
 }
 
 export default HeaderContainer;
