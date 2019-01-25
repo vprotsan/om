@@ -9,12 +9,10 @@ const MainWrapper = (props) => (
   <div class="main-content-wrapper">
     <Switch>
         <Route exact path="/" component={ MainContainer }/>
-        <Route path="/account" component={Account}/>
-        {/* <Route path="/about" render={() => <About title="About"/>}/>
-        <Route exact path="/teachers" component={Teachers}/>
-        <Route path="/teachers/:topic/:name" component={Featured}/>
-        <Route path="/courses" component={Courses}/>
-        <Route component={NotFound}/> */}
+        {props.isLoggedIn ?
+          <Route path="/account" component={Account}/> :
+          ""
+        }
     </Switch>
   </div>
 );

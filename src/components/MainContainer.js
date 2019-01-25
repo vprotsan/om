@@ -9,7 +9,6 @@ const MainContainer = (props) => {
         <RegisterForm/>
       </div>
     )
-
 }
 
 export default MainContainer;
