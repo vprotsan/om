@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import { Route, NavLink, Redirect } from 'react-router-dom';
+import { Route, NavLink, Redirect, Switch } from 'react-router-dom';
 
 import styled from 'styled-components';
-import RegisterForm from './RegisterForm';
+import MainContainer from './MainContainer';
+import Account from './Account';
 
 const MainWrapper = (props) => (
   <div class="main-content-wrapper">
-
-    <RegisterForm/>
+    <Switch>
+        <Route exact path="/" component={MainContainer}/>
+        <Route exact path="/account" component={Account}/>
+        {/* <Route path="/about" render={() => <About title="About"/>}/>
+        <Route exact path="/teachers" component={Teachers}/>
+        <Route path="/teachers/:topic/:name" component={Featured}/>
+        <Route path="/courses" component={Courses}/>
+        <Route component={NotFound}/> */}
+    </Switch>
   </div>
 );
 
