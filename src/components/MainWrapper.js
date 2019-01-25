@@ -8,8 +8,8 @@ import Account from './Account';
 const MainWrapper = (props) => (
   <div class="main-content-wrapper">
     <Switch>
-        <Route exact path="/" component={MainContainer}/>
-        <Route exact path="/account" component={Account}/>
+        <Route exact path="/" component={ MainContainer }/>
+        <Route path="/account" component={Account}/>
         {/* <Route path="/about" render={() => <About title="About"/>}/>
         <Route exact path="/teachers" component={Teachers}/>
         <Route path="/teachers/:topic/:name" component={Featured}/>

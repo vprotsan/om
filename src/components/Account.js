@@ -12,13 +12,13 @@ const Account = ({match}) => (
       <div className="my-account-header group">
           <h2>My Account</h2>
           <ul className="account-nav">
-            <li><NavLink to={`${match.url}/account`}>Account</NavLink></li>
+            <li><NavLink to={`${match.url}/security`}>Security</NavLink></li>
             <li><NavLink to={`${match.url}/data`}>Data</NavLink></li>
             <li><NavLink to={`${match.url}/notifications`}>Notifications</NavLink></li>
           </ul>
       </div>
 
-      <Route exact path={`${match.path}/account`} render={ () => <LoginSecurity />}/>
+      <Route exact path={`${match.path}/security`} render={ () => <LoginSecurity />}/>
       <Route exact path={`${match.path}/data`} render={ () => <Data />}/>
       <Route exact path={`${match.path}/notifications`} render={ () => <Notifications />}/>
   </div>

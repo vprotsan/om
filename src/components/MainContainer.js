@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import RegisterForm from './RegisterForm';
+import RegisterForm from './registerForm/RegisterForm';
 
 const MainContainer = (props) => {
 
