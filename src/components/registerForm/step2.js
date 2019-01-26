@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 
-class RegisterAddInfo extends React.Component {
+class Step2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,11 +12,10 @@ class RegisterAddInfo extends React.Component {
       businessAddr: '',
       website: ''
     };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
 
-  handleInputChange(event) {
+  onChange(event) {
     const target = event.target;
     const value = target.value;
     const name = target.name;
@@ -26,27 +25,22 @@ class RegisterAddInfo extends React.Component {
     });
   }
 
-  handleSubmit(event) {
-    alert('Welcome! ' + this.state.value);
-    event.preventDefault();
-  }
-
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.props.handleSubmit}>
         <label>
           First name
           <input
                 name="firstName"
                 type="text"
                 value={this.state.firstName}
-                onChange={this.handleInputChange}
+                onChange={this.props.onChange}
                 className="input" />
         </label>
 
         <label>
           Business type:
-          <select value={this.state.businessType} onChange={this.handleInputChange}>
+          <select value={this.state.businessType} onChange={this.props.onChange}>
             <option value="grapefruit">Grapefruit</option>
             <option value="lime">Lime</option>
             <option value="coconut">Coconut</option>
@@ -54,10 +48,10 @@ class RegisterAddInfo extends React.Component {
           </select>
         </label>
 
-        <input type="submit" value="Register" className="input btn" onChange={this.handleSubmit}/>
+        <input type="submit" value="Register" className="input btn" onChange={this.props.handleSubmit}/>
       </form>
     );
   }
 }
 
-export default RegisterAddInfo;
+export default Step2;
