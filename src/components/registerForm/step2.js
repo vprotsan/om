@@ -6,7 +6,7 @@ class Step2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      businessType: '',
+      businessName: '',
       workers: '',
       description: '',
       businessAddr: '',
@@ -30,25 +30,42 @@ class Step2 extends Component {
   render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
-        <label>
-          First name
-          <input
-                name="firstName"
-                type="text"
-                value={this.state.firstName}
-                onChange={this.props.onChange}
-                className="input" />
-        </label>
 
-        <label>
-          Business type:
-          <select value={this.state.businessType} onChange={this.props.onChange}>
+        <label>Business type:</label>
+          <select defaultValue={this.state.businessName} onChange={this.props.onChange}>
             <option value="grapefruit">Grapefruit</option>
             <option value="lime">Lime</option>
             <option value="coconut">Coconut</option>
             <option value="mango">Mango</option>
           </select>
-        </label>
+
+        <label>Workers:</label>
+          <select defaultValue={this.state.workers} onChange={this.props.onChange}>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+
+        <textarea rows="5"></textarea>
+
+        <label>Business address</label>
+          <input
+                placeholder="Business address"
+                name="businessAddr"
+                type="text"
+                value={this.state.businessAddr}
+                onChange={this.onChange}
+                className="input"/>
+
+          <label>Website</label>
+            <input
+                  placeholder="Website"
+                  name="website"
+                  type="text"
+                  value={this.state.website}
+                  onChange={this.onChange}
+                  className="input"/>
 
         <input disabled={!this.state.formValid}
                type="submit"
