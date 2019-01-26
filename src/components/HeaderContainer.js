@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import LoginForm from './LoginForm';
 import LoggedIn from './LoggedIn';
+import PropTypes from 'prop-types';
 
 const HeaderStyled = styled.div`
     background: #4064a8;
@@ -23,6 +24,11 @@ const HeaderContainer = (props) => {
      </HeaderStyled>
     )
 
+}
+
+HeaderContainer.propTypes = {
+      handleSubmit: PropTypes.func.isRequired,
+      handleInputChange: PropTypes.func.isRequired
 }
 
 export default HeaderContainer;

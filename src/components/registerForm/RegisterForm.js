@@ -33,79 +33,72 @@ class RegisterForm extends React.Component {
 
   render() {
     return (
+      <div className="register step1">
+          <form onSubmit={this.handleSubmit}>
 
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          First name
-          <input
-                name="firstName"
-                type="text"
-                value={this.state.firstName}
-                onChange={this.handleInputChange}
-                className="input"/>
-        </label>
+           
+            <label>First name</label>
+              <input
+                    name="firstName"
+                    type="text"
+                    value={this.state.firstName}
+                    onChange={this.handleInputChange}
+                    className="input"/>
 
-        <label>
-          Last name
-          <input
-                name="lastName"
-                type="text"
-                value={this.state.lastName}
-                onChange={this.handleInputChange}
-                className="input"/>
-        </label>
 
-        <label>
-          Phone or Email
-          <input
-                name="phone"
-                type="number"
-                value={this.state.phone}
-                onChange={this.handleInputChange}
-                className="input"/>
-        </label>
+            <label>Last name</label>
+              <input
+                    name="lastName"
+                    type="text"
+                    value={this.state.lastName}
+                    onChange={this.handleInputChange}
+                    className="input"/>
 
-        <label>
-          Email address
-          <input
-                name="email"
-                type="email"
-                value={this.state.email}
-                onChange={this.handleInputChange}
-                className="input"/>
-        </label>
+            <label>Phone or Email</label>
+              <input
+                    name="phone"
+                    type="number"
+                    value={this.state.phone}
+                    onChange={this.handleInputChange}
+                    className="input"/>
 
-        <label>
-          Date of Birth
-          <input
-                name="dob"
-                type="date"
-                value={this.state.dob}
-                onChange={this.handleInputChange}
-                className="input" />
-        </label>
 
-        <label>
-          Business Name
-          <input
-                name="businessName"
-                type="text"
-                value={this.state.businessName}
-                onChange={this.handleInputChange}
-                className="input" />
-        </label>
+            <label>Email address</label>
+              <input
+                    name="email"
+                    type="email"
+                    value={this.state.email}
+                    onChange={this.handleInputChange}
+                    className="input"/>
 
-        <label>
-          Password
-          <input
-                name="password"
-                type="password"
-                value={this.state.password}
-                onChange={this.handleInputChange}
-                className="input"/>
-        </label>
-        <input type="submit" value="Register" />
-      </form>
+            <label>Date of Birth</label>
+              <input
+                    name="dob"
+                    type="date"
+                    value={this.state.dob}
+                    onChange={this.handleInputChange}
+                    className="input" />
+
+
+            <label>Business Name</label>
+              <input
+                    name="businessName"
+                    type="text"
+                    value={this.state.businessName}
+                    onChange={this.handleInputChange}
+                    className="input" />
+
+            <label>Password</label>
+              <input
+                    name="password"
+                    type="password"
+                    value={this.state.password}
+                    onChange={this.handleInputChange}
+                    className="input"/>
+
+            <input type="submit" value="Register" className="input btn"/>
+          </form>
+      </div>
     );
   }
 }

@@ -3,13 +3,10 @@ import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import HeaderContainer from './components/HeaderContainer';
 import MainWrapper from './components/MainWrapper';
+import PropTypes from 'prop-types';
 
-
-const MainStyles = styled.div`
-    &.input {
-      padding: 0.8em 1.2em;
-    }
-`;
+import './css/reset.css';
+import './css/global.css';
 
 
 class App extends Component {
@@ -52,6 +49,12 @@ class App extends Component {
       </BrowserRouter>
     )
   }
+}
+
+App.propTypes = {
+      handleSubmit: PropTypes.func,
+      handleInputChange: PropTypes.func,
+      isLoggedIn: PropTypes.bool
 }
 
 export default App;
