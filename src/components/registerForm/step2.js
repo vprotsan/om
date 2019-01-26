@@ -25,6 +25,8 @@ class Step2 extends Component {
     });
   }
 
+
+
   render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
@@ -48,7 +50,11 @@ class Step2 extends Component {
           </select>
         </label>
 
-        <input type="submit" value="Register" className="input btn" onChange={this.props.handleSubmit}/>
+        <input disabled={!this.state.formValid}
+               type="submit"
+               value="Register"
+               className="input btn"
+               onChange={this.props.handleSubmit}/>
       </form>
     );
   }
