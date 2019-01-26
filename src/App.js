@@ -14,7 +14,7 @@ class App extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        isLogged: true
+        isLogged: false
       };
       this.handleInputChange = this.handleInputChange.bind(this);
   }
