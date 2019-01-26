@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 
 const LoginForm = (props) => {
 
@@ -11,7 +10,8 @@ const LoginForm = (props) => {
               type="text"
               name="loginValue"
               value={props.loginValue}
-              onChange={props.handleInputChange} />
+              onChange={props.handleInputChange}
+              className="input" />
         </label>
         <label>
           Password
@@ -19,11 +19,12 @@ const LoginForm = (props) => {
               type="password"
               name="passwordValue"
               value={props.passwordValue}
-              onChange={props.handleInputChange} />
+              onChange={props.handleInputChange}
+              className="input"/>
         </label>
-        <input type="submit" value="Login" />
+        <input type="submit" value="Login" className="input btn"/>
       </form>
-    );  
+    );
 }
 
 export default LoginForm;

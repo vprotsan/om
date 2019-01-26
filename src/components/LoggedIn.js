@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Route, NavLink, Redirect } from 'react-router-dom';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const LoggedIn = (props) => {
 
     return (
-      <div class="user">
+      <div className="user">
         <NavLink to={`/account`}>My Account</NavLink>
       </div>
     );

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import {
-  BrowserRouter,
-  Route,
-  Switch
-} from 'react-router-dom';
-import styled from 'styled-components'
+import { BrowserRouter } from 'react-router-dom';
+import styled from 'styled-components';
 import HeaderContainer from './components/HeaderContainer';
 import MainWrapper from './components/MainWrapper';
-import Grid from 'react-css-grid'
+
+
+const MainStyles = styled.div`
+    &.input {
+      padding: 0.8em 1.2em;
+    }
+`;
 
 
 class App extends Component {
@@ -39,7 +41,6 @@ class App extends Component {
 
     return(
       <BrowserRouter>
-
           <div className="main-container">
             <HeaderContainer  handleSubmit = {this.handleSubmit}
                               handleInputChange = {this.handleInputChange}

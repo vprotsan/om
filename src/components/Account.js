@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, NavLink, Redirect } from 'react-router-dom';
+import { Route, NavLink } from 'react-router-dom';
 
 import Data from './myaccount/data.js';
 import LoginSecurity from './myaccount/loginSecurity.js';

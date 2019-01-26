@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { Route, NavLink, Redirect, Switch } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-import styled from 'styled-components';
 import MainContainer from './MainContainer';
 import Account from './Account';
 
 const MainWrapper = (props) => (
-  <div class="main-content-wrapper">
+  <div className="main-content-wrapper">
     <Switch>
         <Route exact path="/" component={ MainContainer }/>
         {props.isLoggedIn ?

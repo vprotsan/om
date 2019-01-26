@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
-import Grid from 'react-css-grid';
+import React from 'react';
 
 
 class RegisterForm extends React.Component {
@@ -43,7 +41,8 @@ class RegisterForm extends React.Component {
                 name="firstName"
                 type="text"
                 value={this.state.firstName}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                className="input"/>
         </label>
 
         <label>
@@ -52,7 +51,8 @@ class RegisterForm extends React.Component {
                 name="lastName"
                 type="text"
                 value={this.state.lastName}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                className="input"/>
         </label>
 
         <label>
@@ -61,7 +61,8 @@ class RegisterForm extends React.Component {
                 name="phone"
                 type="number"
                 value={this.state.phone}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                className="input"/>
         </label>
 
         <label>
@@ -70,7 +71,8 @@ class RegisterForm extends React.Component {
                 name="email"
                 type="email"
                 value={this.state.email}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                className="input"/>
         </label>
 
         <label>
@@ -79,7 +81,8 @@ class RegisterForm extends React.Component {
                 name="dob"
                 type="date"
                 value={this.state.dob}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                className="input" />
         </label>
 
         <label>
@@ -88,7 +91,8 @@ class RegisterForm extends React.Component {
                 name="businessName"
                 type="text"
                 value={this.state.businessName}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                className="input" />
         </label>
 
         <label>
@@ -97,7 +101,8 @@ class RegisterForm extends React.Component {
                 name="password"
                 type="password"
                 value={this.state.password}
-                onChange={this.handleInputChange} />
+                onChange={this.handleInputChange}
+                className="input"/>
         </label>
         <input type="submit" value="Register" />
       </form>
