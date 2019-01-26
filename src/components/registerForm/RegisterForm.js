@@ -118,9 +118,11 @@ class RegisterForm extends React.Component {
                       className="input"/>
             </div>
           </div>
+          <div className="row">
             <div className="right">
-              <input type="submit" value="Register" className="input btn"/>
+              <input type="submit" value="Register" className="input btn blue"/>
             </div>
+          </div>
           </form>
       </div>
     );

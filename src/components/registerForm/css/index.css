@@ -3,6 +3,10 @@
   flex-direction: row;
 }
 
+.input {
+  margin-top: 1em;
+}
+
 .register .column{
   display: flex;
   flex-direction: column;

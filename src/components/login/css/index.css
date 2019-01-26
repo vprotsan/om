@@ -6,17 +6,6 @@
   display: none;
 }
 
-.btn.white {
-  border: 1px solid #ffffff;
-  letter-spacing: 1px;
-}
-
-.btn.white:hover {
-  cursor: pointer;
-  background: #355592;
-  transition: 0.4s all linear;
-}
-
 .white::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: pink;
 }

@@ -32,3 +32,19 @@ body {
   margin-top: 2em;
   padding: 2em;
 }
+
+.btn.white {
+  border: 1px solid #ffffff;
+  letter-spacing: 1px;
+}
+
+.btn.blue {
+  border: 1px solid #4064a8;
+  letter-spacing: 1px;
+}
+
+.btn.white:hover {
+  cursor: pointer;
+  background: #355592;
+  transition: 0.4s all linear;
+}
