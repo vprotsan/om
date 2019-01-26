@@ -1,0 +1,34 @@
+.user {
+  width: 33%;
+}
+
+.user label {
+  display: none;
+}
+
+.btn.white {
+  border: 1px solid #ffffff;
+  letter-spacing: 1px;
+}
+
+.btn.white:hover {
+  cursor: pointer;
+  background: #355592;
+  transition: 0.4s all linear;
+}
+
+.white::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+
+.white::-moz-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+
+.white:-ms-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+
+.white:-moz-placeholder { /* Firefox 18- */
+  color: pink;
+}

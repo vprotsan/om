@@ -1,17 +1,18 @@
 import React from 'react';
+import './css/index.css';
 
 
 class RegisterForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: 'First name',
-      lastName: 'Last name',
-      phone: 'Phone or email',
-      email: 'Email',
-      dob: 'Date of Birth',
-      businessName: 'Business name',
-      password: 'Password'
+      firstName: '',
+      lastName: '',
+      phone: '',
+      email: '',
+      dob: '',
+      businessName: '',
+      password: ''
     };
     this.handleInputChange = this.handleInputChange.bind(this);
   }
@@ -34,6 +35,7 @@ class RegisterForm extends React.Component {
   render() {
     return (
       <div className="register step1">
+         <h3>New to Gignav? Register!</h3>
           <form onSubmit={this.handleSubmit}>
 
 
@@ -41,6 +43,7 @@ class RegisterForm extends React.Component {
                <div className="left">
                    <label>First name</label>
                      <input
+                           placeholder="First name"
                            name="firstName"
                            type="text"
                            value={this.state.firstName}
@@ -51,6 +54,7 @@ class RegisterForm extends React.Component {
                <div className="right">
                    <label>Last name</label>
                      <input
+                           placeholder="Last name"
                            name="lastName"
                            type="text"
                            value={this.state.lastName}
@@ -63,6 +67,7 @@ class RegisterForm extends React.Component {
                 <div className="left">
                         <label>Phone or Email</label>
                         <input
+                              placeholder="Phone or Email"
                               name="phone"
                               type="number"
                               value={this.state.phone}
@@ -72,6 +77,7 @@ class RegisterForm extends React.Component {
                 <div className="right">
                       <label>Email address</label>
                       <input
+                            placeholder="Email address"
                             name="email"
                             type="email"
                             value={this.state.email}
@@ -84,6 +90,7 @@ class RegisterForm extends React.Component {
               <div className="left">
                  <label>Date of Birth</label>
                   <input
+                        placeholder="Date of Birth"
                         name="dob"
                         type="date"
                         value={this.state.dob}
@@ -93,6 +100,7 @@ class RegisterForm extends React.Component {
             <div className="left">
                 <label>Business Name</label>
                 <input
+                      placeholder="Business Name"
                       name="businessName"
                       type="text"
                       value={this.state.businessName}
@@ -102,6 +110,7 @@ class RegisterForm extends React.Component {
             <div className="left">
                <label>Password</label>
                 <input
+                      placeholder="Password"
                       name="password"
                       type="password"
                       value={this.state.password}

@@ -17,6 +17,7 @@ class App extends Component {
         isLogged: false
       };
       this.handleInputChange = this.handleInputChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInputChange(event) {

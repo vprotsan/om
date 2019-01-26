@@ -13,6 +13,7 @@ class RegisterAddInfo extends React.Component {
       website: ''
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleInputChange(event) {
@@ -53,7 +54,7 @@ class RegisterAddInfo extends React.Component {
           </select>
         </label>
 
-        <input type="submit" value="Register" className="input btn"/>
+        <input type="submit" value="Register" className="input btn" onChange={this.handleSubmit}/>
       </form>
     );
   }

@@ -1,0 +1,13 @@
+.register .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.register .column{
+  display: flex;
+  flex-direction: column;
+}
+
+.register label{
+  display: none;
+}
