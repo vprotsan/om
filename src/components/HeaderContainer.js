@@ -6,12 +6,11 @@ import PropTypes from 'prop-types';
 
 const HeaderStyled = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     background: #4064a8;
     padding: 2em;
     width: 100%;
 `;
-
 
 const HeaderContainer = (props) => {
 

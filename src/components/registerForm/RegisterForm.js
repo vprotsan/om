@@ -17,6 +17,15 @@ class RegisterForm extends React.Component {
   submitStepOne = (event) => {
     console.log(this.state);
     event.preventDefault();
+    // axios.post(`https://......../${this.state.inputValue}&page=${pageNumber}`)
+    //   .then((data) => {
+    //     console.log(data)
+    //     this.setState({
+    //       nextStep: true
+    //     })
+    //
+    //   })
+    //temporary:
     this.setState({
         nextStep: true
     })
@@ -43,7 +52,7 @@ class RegisterForm extends React.Component {
                         :
                         <Step1 handleSubmit={this.submitStepOne}/>
     return (
-      <div>
+      <div className="registerWrapper">
           { formToShow }
       </div>
     );

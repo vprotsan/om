@@ -65,6 +65,7 @@ class Step1 extends Component {
   render() {
     return (
       <div>
+          <h3>New to Gignav? Register!</h3>
           <div className="panel panel-default">
               <FormErrors formErrors={this.state.formErrors} />
           </div>
@@ -149,7 +150,8 @@ class Step1 extends Component {
                       className="input"/>
             </div>
             </div>
-            <div className="row">
+            <p className="smallPrint">By proceeding beyond this page, I agree to terms and conditions.</p>
+            <div className="row last">
               <div className="right">
                 <input disabled={!this.state.formValid}
                        type="submit"

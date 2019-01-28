@@ -1,17 +1,65 @@
-.register .row {
+.registerWrapper {
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 1px 1px 25px #e2e2e2;
+  padding: 1.5em;
+}
+
+.registerWrapper h3 {
+  padding-bottom: 1.2em;
+  font-size: 1.2em;
+}
+
+.registerWrapper label {
+  display: none;
+}
+
+.row {
   display: flex;
   flex-direction: row;
+}
+
+.row.last {
+  justify-content: flex-end;
 }
 
 .input {
   margin-top: 1em;
 }
 
-.register .column{
+.column{
   display: flex;
   flex-direction: column;
 }
 
-.register label{
-  display: none;
+.btn.blue {
+  font-size:1.01em;
+  padding-top: 0.8em;
+  float: right;
+}
+
+.input.btn.blue {
+  border-radius: 30px;
+  margin-top: 0.5em;
+}
+
+.panel {
+  position: relative;
+}
+
+.formErrors {
+  position: absolute;
+  top: -17px;
+  left: 0;
+}
+
+.formErrors p {
+  color: red;
+  font-size: 0.8em;
+}
+
+.smallPrint {
+  font-size: 0.8em;
+  color: #383838;
+  padding: 0.8em 0.2em;
 }

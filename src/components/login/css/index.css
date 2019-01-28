@@ -21,3 +21,7 @@
 .white:-moz-placeholder { /* Firefox 18- */
   color: pink;
 }
+
+.loggedin a {
+  color: rgba(255,255,255, 0.8);
+}
