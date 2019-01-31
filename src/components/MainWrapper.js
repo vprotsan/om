@@ -12,7 +12,6 @@ import Account from './Account';
 const MainWrapperStyles = styled.div`
 
 
-
 `;
 
 const MainWrapper = (props) => (
