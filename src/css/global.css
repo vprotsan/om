@@ -6,7 +6,25 @@ body {
   color:#212428;
 }
 
-.input {
+.form-control {
+  border-radius: 20px;
+  border: 1px solid #58595b;
+}
+
+.header-wrapper {
+  padding: 2em;
+  background: #4064a8;
+}
+
+.main-content-wrapper {
+  padding: 3em 0 5em;;
+}
+
+.btn.btn-secondary {
+  border: 1px solid #ffffff;
+}
+
+/* .input {
   padding: 0.9em 1.3em;
   margin: 0.5em;
   border-radius: 20px;
@@ -47,4 +65,4 @@ body {
   cursor: pointer;
   background: #355592;
   transition: 0.4s all linear;
-}
+} */

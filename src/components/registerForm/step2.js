@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Col, Row, Button, Form, FormGroup, Label, Input, FormText, CustomInput } from 'reactstrap';
 import styled from 'styled-components';
 import Select from 'react-select';
 // import FormErrors from './ErrorsForm.js';
@@ -15,10 +16,14 @@ const optionsBusinessType = [
   { value: 'option3', label: 'option3' }
 ];
 
-
 const Step2Styles = styled.div`
 
-  textarea {
+  .form-control {
+    border-radius: 20px;
+    border: 1px solid #58595b;
+  }
+
+  ${'' /* textarea {
     width: 100%;
     border-radius: 20px;
     padding: 15px;
@@ -26,7 +31,15 @@ const Step2Styles = styled.div`
   }
 
   .select {
-    width: 50%;
+    width: 49%;
+  }
+
+  .select:nth-child(1) {
+    margin-right: 0.5em;
+  }
+
+  .select:nth-child(2){
+    margin-left: 0.5em;
   }
 
   .select > div >div {
@@ -54,7 +67,7 @@ const Step2Styles = styled.div`
     background-image: none;
     background-color:#2D6C7A;
     color:#FFFFFF;
-  }
+  } */}
 
 `;
 
@@ -77,6 +90,11 @@ class Step2 extends Component {
         console.log(selectorFiles);
   }
 
+  handleSubmit(event) {
+    alert('Logged in: ' + this.state.value);
+    event.preventDefault();
+  }
+
   onChange(event) {
     const target = event.target;
     const value = target.value;
@@ -93,72 +111,72 @@ class Step2 extends Component {
     return (
       <Step2Styles>
           <h3>Welcome!</h3>
-          <div className="panel panel-default">
+            <div className="panel panel-default">
               {/* <FormErrors formErrors={this.state.formErrors} /> */}
           </div>
-          <form onSubmit={this.props.handleSubmit}>
 
-            <div className="row">
-               <div className="left select">
-                   <label>Business type:</label>
-                      <Select
-                        placeholder="Business Type"
-                        value={selectedOption}
-                        onChange={this.handleChange}
-                        options={optionsWorkers}
-                      />
-                </div>
-
-                <div className="right select">
-                    <label>Workers:</label>
-                      <Select
-                        value={selectedOption}
-                        onChange={this.handleChange}
-                        options={optionsBusinessType}
-                      />
-                </div>
-            </div>
-
-            <div className="row">
-              <textarea rows="5"></textarea>
-            </div>
-
-            <div className="row fullWidth">
-            <label>Business address</label>
-              <input
-                    placeholder="Business address"
-                    name="businessAddr"
-                    type="text"
-                    value={this.state.businessAddr}
-                    onChange={this.onChange}
-                    className="input"/>
-            </div>
-            <div className="row">
-              <div className="left">
-                  <label>Website</label>
-                    <input
-                          placeholder="Website"
-                          name="website"
-                          type="text"
-                          value={this.state.website}
-                          onChange={this.onChange}
-                          className="input"/>
-                </div>
-                <div className="right">
-                    <input type="file" id="fileUploadStep2"
-                           onChange={ (e) => this.handleChange(e.target.files) }/>
-                    <label for="fileUploadStep2">Upload Image</label>
-                    {/* <input type="file" onChange={ (e) => this.handleChange(e.target.files) } /> */}
-                </div>
-            </div>
-            <div className="row last">
-              <input disabled={!this.state.formValid}
-                     type="submit"
-                     value="Register"
-                     className="input btn"
-                     onChange={this.props.handleSubmit}/>
-              </div>
-          </form>
+          <Form onSubmit={this.props.handleSubmit}>
+            <Row form>
+              <Col md={6}>
+                  <FormGroup>
+                      <Label for="businessType">Business Type</Label>
+                      <CustomInput type="select" id="businessType" name="businessType">
+                          <option value="">Business Type</option>
+                          <option>Value 1</option>
+                          <option>Value 2</option>
+                          <option>Value 3</option>
+                          <option>Value 4</option>
+                          <option>Value 5</option>
+                      </CustomInput>
+                  </FormGroup>
+              </Col>
+              <Col md={6}>
+                  <FormGroup>
+                      <Label for="Workers">Workers</Label>
+                      <CustomInput type="select" id="Workers" name="Workers">
+                            <option value="">Workers</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                      </CustomInput>
+                  </FormGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                  <FormGroup>
+                      <Label for="exampleText" hidden>Text Area</Label>
+                      <Input type="textarea" name="text" id="exampleText" row="5"/>
+                  </FormGroup>
+                </Col>
+            </Row>
+            <Row>
+              <Col md={12}>
+                <FormGroup>
+                  <Label for="BusinessName" hidden>Business Name</Label>
+                  <Input type="text" name="BusinessName" id="BusinessName" placeholder="Business Name" />
+                </FormGroup>
+              </Col>
+            </Row>
+            <Row>
+              <Col md={6}>
+                <FormGroup>
+                  <Label for="Website" hidden>Website</Label>
+                  <Input type="text" name="Website" id="Website" placeholder="Website" />
+                </FormGroup>
+              </Col>
+              <Col md={6}>
+                  <FormGroup>
+                          <Label for="exampleFile">Upload image</Label>
+                          <Input type="file" name="file" id="uploadImage" />
+                  </FormGroup>
+              </Col>
+            </Row>
+            <p className="smallPrint">By proceeding beyond this page, I agree to terms and conditions.</p>
+            <Button>Save</Button>
+          </Form>
       </Step2Styles>
     );
   }

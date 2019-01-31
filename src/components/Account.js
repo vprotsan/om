@@ -1,11 +1,13 @@
 import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
+import styled from 'styled-components';
+import { Nav, NavItem } from 'reactstrap';
+import classnames from 'classnames';
 
 import Data from './myaccount/data.js';
 import LoginSecurity from './myaccount/loginSecurity.js';
 import Notifications from './myaccount/notifications.js';
 
-import styled from 'styled-components';
 
 const MyAccContStyles = styled.div`
 
@@ -18,35 +20,37 @@ const MyAccContStyles = styled.div`
     min-height: 500px;
   }
 
-  .account-nav {
-    display: flex;
-    padding: 1em;
+  .nav-item {
+    padding: 1em 1.5em;
+    margin: 0.5em;
   }
 
-  .account-nav a {
-    margin: 0 2em;
+  .table tr td{
+    padding: 2em 1em;
   }
 
 `;
 
-
 const Account = ({match}) => (
-  <MyAccContStyles>
-      <div className="containerMyAccount">
-          <div className="my-account-header group">
-              <h2>My Account</h2>
-              <ul className="account-nav">
-                <li><NavLink to={`${match.url}/security`}>Security</NavLink></li>
-                <li><NavLink to={`${match.url}/data`}>Data</NavLink></li>
-                <li><NavLink to={`${match.url}/notifications`}>Notifications</NavLink></li>
-              </ul>
-          </div>
+          <MyAccContStyles className="containerMyAccount">
+              <div className="my-account-header group">
+                    <Nav tabs>
+                        <NavItem>
+                            <NavLink to={`${match.url}/security`} active>Security</NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink to={`${match.url}/data`}>Data</NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink to={`${match.url}/notifications`}>Notifications</NavLink>
+                        </NavItem>
+                    </Nav>
+              </div>
 
-          <Route exact path={`${match.path}/security`} render={ () => <LoginSecurity />}/>
-          <Route exact path={`${match.path}/data`} render={ () => <Data />}/>
-          <Route exact path={`${match.path}/notifications`} render={ () => <Notifications />}/>
-      </div>
-  </MyAccContStyles>
-);
+              <Route exact path={`${match.path}/security`} render={ () => <LoginSecurity />}/>
+              <Route exact path={`${match.path}/data`} render={ () => <Data />}/>
+              <Route exact path={`${match.path}/notifications`} render={ () => <Notifications />}/>
+          </MyAccContStyles>
+)
 
 export default Account;
