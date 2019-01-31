@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container, Row, Col } from 'reactstrap';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import PropTypes from 'prop-types';
 // import './css/index.css';
@@ -7,36 +6,6 @@ import PropTypes from 'prop-types';
 const LoginForm = (props) => {
 
     return (
-        // <Form onSubmit={props.handleSubmit}>
-        //     <Container>
-        //         <Row>
-        //             <Col xs="12" sm="6">
-        //                 <FormGroup>
-        //                       <Input
-        //                           type="text"
-        //                           name="loginValue"
-        //                           value={props.loginValue}
-        //                           onChange={props.handleInputChange}
-        //                           id="exampleEmail"
-        //                           placeholder="Email or Phone" />
-        //                 </FormGroup>
-        //             </Col>
-        //             <Col xs="12" sm="6">
-        //                 <FormGroup>
-        //                         <Input type="password"
-        //                                name="passwordValue"
-        //                                id="examplePassword"
-        //                                placeholder="password"
-        //                                value={props.passwordValue}
-        //                                onChange={props.handleInputChange} />
-        //                 </FormGroup>
-        //             </Col>
-        //             <Col xs="12" sm="2">
-        //                  <Button type="submit" value="Login">Submit</Button>
-        //             </Col>
-        //         </Row>
-        //     </Container>
-        // </Form>
 
         <Form inline onSubmit={props.handleSubmit}>
             <FormGroup>
@@ -63,33 +32,7 @@ const LoginForm = (props) => {
             {' '}
             <Button type="submit" value="Login">Login</Button>
         </Form>
-
-    //   <div className="user login">
-    //     <form onSubmit={props.handleSubmit}>
-    //       <label>
-    //         Email or Phone</label>
-    //         <input
-    //             placeholder="Email or Phone"
-    //             type="text"
-    //             name="loginValue"
-    //             value={props.loginValue}
-    //             onChange={props.handleInputChange}
-    //             className="input" />
-    //
-    //       <label>
-    //         Password</label>
-    //         <input
-    //             placeholder="password"
-    //             type="password"
-    //             name="passwordValue"
-    //             value={props.passwordValue}
-    //             onChange={props.handleInputChange}
-    //             className="input"/>
-    //
-    //       <input type="submit" value="Login" className="input btn white"/>
-    //     </form>
-    // </div>
-    );
+    )
 }
 
 Input.propTypes = {

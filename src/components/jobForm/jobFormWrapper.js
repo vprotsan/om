@@ -1,5 +1,4 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
 // import './css/index.css';
 
 // import JobForm from './jobForm';

@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
-import { Col, Row, Button, Form, FormGroup, Label, Input, FormText, CustomInput } from 'reactstrap';
+import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from 'reactstrap';
 import styled from 'styled-components';
-import Select from 'react-select';
 // import FormErrors from './ErrorsForm.js';
-
-const optionsWorkers = [
-  { value: '1', label: '1' },
-  { value: '2', label: '2' },
-  { value: '3', label: '3' }
-];
-
-const optionsBusinessType = [
-  { value: 'option1', label: 'option1' },
-  { value: 'option2', label: 'option2' },
-  { value: 'option3', label: 'option3' }
-];
 
 const Step2Styles = styled.div`
 
@@ -23,35 +10,7 @@ const Step2Styles = styled.div`
     border: 1px solid #58595b;
   }
 
-  ${'' /* textarea {
-    width: 100%;
-    border-radius: 20px;
-    padding: 15px;
-    margin: 1em 0;
-  }
-
-  .select {
-    width: 49%;
-  }
-
-  .select:nth-child(1) {
-    margin-right: 0.5em;
-  }
-
-  .select:nth-child(2){
-    margin-left: 0.5em;
-  }
-
-  .select > div >div {
-    border-radius: 20px;
-    border: 1px solid #58595b;
-  }
-
-  .fullWidth input {
-    width: 100%;
-  }
-
-  #fileUploadStep2[type=file] {
+  ${'' /* #fileUploadStep2[type=file] {
     display:none;
     margin:10px;
   }
@@ -67,7 +26,7 @@ const Step2Styles = styled.div`
     background-image: none;
     background-color:#2D6C7A;
     color:#FFFFFF;
-  } */}
+  }  */}
 
 `;
 
@@ -106,40 +65,37 @@ class Step2 extends Component {
   }
 
   render() {
-    const { selectedOption } = this.state;
 
     return (
       <Step2Styles>
           <h3>Welcome!</h3>
-            <div className="panel panel-default">
-              {/* <FormErrors formErrors={this.state.formErrors} /> */}
-          </div>
-
           <Form onSubmit={this.props.handleSubmit}>
             <Row form>
               <Col md={6}>
                   <FormGroup>
                       <Label for="businessType">Business Type</Label>
-                      <CustomInput type="select" id="businessType" name="businessType">
-                          <option value="">Business Type</option>
-                          <option>Value 1</option>
-                          <option>Value 2</option>
-                          <option>Value 3</option>
-                          <option>Value 4</option>
-                          <option>Value 5</option>
+                      <CustomInput type="select"
+                                   id="businessType"
+                                  name="businessType"
+                                  onChange={this.onChange}
+                                  value = {this.state.businessType}>
+                          <option value="a">Business Type</option>
+                          <option value="b">Value 1</option>
+                          <option value="d">Value 2</option>
                       </CustomInput>
                   </FormGroup>
               </Col>
               <Col md={6}>
                   <FormGroup>
                       <Label for="Workers">Workers</Label>
-                      <CustomInput type="select" id="Workers" name="Workers">
+                      <CustomInput type="select"
+                                  id="Workers"
+                                  name="Workers"
+                                  onChange={this.onChange}
+                                  value = {this.state.Workers}>
                             <option value="">Workers</option>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
                       </CustomInput>
                   </FormGroup>
               </Col>

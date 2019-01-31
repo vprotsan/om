@@ -1,15 +1,8 @@
 import React from 'react';
-import { Modal, ModalHeader, ModalBody, ModalFooter , CustomInput, Col, Row, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
-import Select from 'react-select';
+import { Modal, ModalHeader, ModalBody, ModalFooter , CustomInput, Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import PropTypes from 'prop-types';
 
 import FormErrors from '../registerForm/ErrorsForm';
-
-const states = [
-  { value: 'MA', label: 'MA' },
-  { value: 'FL', label: 'FL' },
-  { value: 'NY', label: 'NY' }
-];
 
 class PostAJobModal extends React.Component {
   constructor(props) {

@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Nav, NavItem } from 'reactstrap';
-import classnames from 'classnames';
 
 import Data from './myaccount/data.js';
 import LoginSecurity from './myaccount/loginSecurity.js';

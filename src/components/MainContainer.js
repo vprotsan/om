@@ -2,8 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import RegisterForm from './registerForm/RegisterForm';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-
 
 const MainContainer = (props) => {
 

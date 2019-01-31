@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
 
 import HeaderContainer from './components/HeaderContainer';
 import MainWrapper from './components/MainWrapper';

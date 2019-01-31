@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Nav, Dropdown, DropdownToggle, DropdownItem, DropdownMenu, NavItem, Modal, ModalHeader, ModalBody, ModalFooter , CustomInput, Col, Row, Button, Form, FormGroup, Label, Input, FormText} from 'reactstrap';
+import {Nav,Dropdown, DropdownToggle, DropdownMenu, NavItem } from 'reactstrap';
 import styled from 'styled-components';
 // import './css/index.css';
 
