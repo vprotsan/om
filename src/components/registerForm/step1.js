@@ -13,16 +13,17 @@ class Step1 extends Component {
       firstName: '',
       lastName: '',
       phone: '',
-      email: '',
+      emailAddress: '',
       dob: '',
       businessName: '',
       password: '',
-      formErrors: {email: '', password: ''},
+      formErrors: {emailAddress: '', password: ''},
       emailValid: false,
       passwordValid: false,
       formValid: false
     };
     this.onChange = this.onChange.bind(this);
+    this.validateField = this.validateField.bind(this);
   }
 
   onChange(event) {
@@ -41,7 +42,7 @@ class Step1 extends Component {
       let passwordValid = this.state.passwordValid;
 
       switch(fieldName) {
-        case 'email':
+        case 'emailAddress':
           emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
           fieldValidationErrors.email = emailValid ? '' : ' is invalid';
           break;
@@ -70,6 +71,9 @@ class Step1 extends Component {
     return (
       <div>
           <h3>New to Gignav? Register!</h3>
+          <div className="panel panel-default">
+              <FormErrors formErrors={this.state.formErrors} />
+          </div>
           <Form onSubmit={this.props.handleSubmit}>
                   <Row form>
                     <Col md={6}>
@@ -114,7 +118,7 @@ class Step1 extends Component {
                                name="emailAddress"
                                id="emailAddress"
                                placeholder="Email address"
-                               value={this.state.email}
+                               value={this.state.emailAddress}
                                onChange={this.onChange} />
                       </FormGroup>
                     </Col>
@@ -122,7 +126,7 @@ class Step1 extends Component {
                   <Row form>
                       <Col md={6}>
                         <FormGroup>
-                          <Label for="emailAddress" hidden>Date of Birth</Label>
+                          <Label for="dob" hidden>Date of Birth</Label>
                           <Input type="date"
                                  name="dob"
                                  id="dob"
