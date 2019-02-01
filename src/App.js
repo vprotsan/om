@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import HeaderContainer from './components/HeaderContainer';
 import MainWrapper from './components/MainWrapper';
-import PostAJobModal from './components/jobForm/jobModal'
 import PropTypes from 'prop-types';
 
 import './css/reset.css';
@@ -109,7 +108,6 @@ class App extends Component {
 
                       />
                       <MainWrapper isLoggedIn = {this.state.isLogged}/>
-                      {/* <PostAJobModal toggle = {this.toggle}/> */}
                 </div>
           </AppStyles>
       </BrowserRouter>

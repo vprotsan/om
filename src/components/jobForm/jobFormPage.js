@@ -102,7 +102,7 @@ class PostAJobForm extends React.Component {
     return (
       <div>
           <div size="lg" className={this.props.className}>
-            <div toggle={this.toggle}>Publish a job</div>
+            <h3>Publish a job</h3>
             <div>
               <div className="jobForm">
 
@@ -113,7 +113,7 @@ class PostAJobForm extends React.Component {
                   <Form onSubmit={this.props.handleSubmit}>
                           <Row form>
                                 <Col md={3}>
-                                  <Label for="firstName">First name</Label>
+                                  <Label for="firstName"><h5>First name</h5></Label>
                                 </Col>
                                 <Col md={6}>
                                     <FormGroup>
@@ -129,7 +129,7 @@ class PostAJobForm extends React.Component {
                           </Row>
                           <Row form>
                                 <Col md={3}>
-                                  <Label for="jobTitle">Job Title:</Label>
+                                  <Label for="jobTitle"><h5>Job Title:</h5></Label>
                                 </Col>
                                 <Col md={6}>
                                     <FormGroup>
