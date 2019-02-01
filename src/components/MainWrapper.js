@@ -6,24 +6,24 @@ import styled from 'styled-components';
 
 
 import MainContainer from './MainContainer';
-import JobFormWrapper from './jobForm/jobFormWrapper';
+import JobFormPage from './jobForm/jobFormPage';
+import Dashboard from './myaccount/dashboard';
 import Account from './Account';
 
 const MainWrapperStyles = styled.div`
-
-
 `;
 
 const MainWrapper = (props) => (
   <MainWrapperStyles className="main-content-wrapper">
-      <Container>
+      <Container fluid={true}>
               <Switch>
                   <Route exact path="/" component={ MainContainer }/>
                   {/* for demontration */}
-                  <Route exact path="/post-a-job" component={ JobFormWrapper }/>
+                  <Route exact path="/dashboard" component={ Dashboard }/>
+                  <Route exact path="/post-a-job" component={ JobFormPage }/>
                   {/* END for demontration */}
                   {props.isLoggedIn ?
-                    <Route path="/account" component={Account}/> :
+                    <Route path="/settings" component={Account}/> :
                     ""
                   }
               </Switch>

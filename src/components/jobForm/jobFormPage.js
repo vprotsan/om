@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import FormErrors from '../registerForm/ErrorsForm';
 
-class PostAJobModal extends React.Component {
+class PostAJobForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -101,11 +101,9 @@ class PostAJobModal extends React.Component {
   render() {
     return (
       <div>
-        <Button className="postJob blue" onClick={this.toggle}>{this.state.buttonLabel}</Button>
-        <Modal size="lg" isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <div size="lg" className={this.props.className}>
-            <ModalHeader toggle={this.toggle}>Publish a job</ModalHeader>
-            <ModalBody>
+            <div toggle={this.toggle}>Publish a job</div>
+            <div>
               <div className="jobForm">
 
                   <div className="panel panel-default">
@@ -452,13 +450,12 @@ class PostAJobModal extends React.Component {
                           </Row>
                   </Form>
               </div>
-            </ModalBody>
-            <ModalFooter>
+            </div>
+            <div>
               <Button color="primary" onClick={this.toggle}>Publish job</Button>{' '}
               <Button color="main" onClick={this.toggle}>Save draft</Button>
-            </ModalFooter>
+            </div>
           </div>
-        </Modal>
       </div>
     );
   }
@@ -496,4 +493,4 @@ Modal.propTypes = {
   innerRef: PropTypes.object,
 }
 
-export default PostAJobModal;
+export default PostAJobForm;

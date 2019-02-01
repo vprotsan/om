@@ -163,7 +163,7 @@ class Step1 extends Component {
                       </Col>
                   </Row>
                   <p className="smallPrint">By proceeding beyond this page, I agree to terms and conditions.</p>
-                  <Button>Register</Button>
+                  <Button className="blue" >Register</Button>
           </Form>
       </div>
     );

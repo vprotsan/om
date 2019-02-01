@@ -28,6 +28,11 @@ const MyAccContStyles = styled.div`
     padding: 2em 1em;
   }
 
+  .nav-item a {
+    font-size: 1.2em;
+    color: #023367;
+  }
+
 `;
 
 const Account = ({match}) => (

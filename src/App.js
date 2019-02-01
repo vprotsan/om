@@ -8,36 +8,54 @@ import PostAJobModal from './components/jobForm/jobModal'
 import PropTypes from 'prop-types';
 
 import './css/reset.css';
-import './css/global.css';
+// import './css/global.css';
 
 const AppStyles = styled.div`
 
-  .form-control, .btn {
+  body {
+    background: #f8f9fe;
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.2;
+    color:#212428;
+  }
+
+  .form-control,
+  .custom-select {
     border-radius: 20px;
-    border: 1px solid #58595b;
+    border: 1px solid #bfbfbf;
   }
 
-   .btn-secondary {
-     background: #4064a8;
-     color: #ffffff;
-   }
-
-  textarea {
-    width: 100%;
-    border-radius: 20px;
-    padding: 15px;
-    margin: 1em 0;
+  .header-wrapper {
+    padding: 2em;
+    background: #4064a8;
   }
 
-  position: relative;
-
-  .main-container-wrapper div:nth-child(3) button {
-    position: absolute;
-    top: 29px;
-    right: 41px;
+  .main-content-wrapper {
+    padding: 3em 2% 5em;;
   }
 
+  .btn.btn-secondary {
+    border: 1px solid #ffffff;
+  }
 
+  .btn.blue {
+    font-size: 1.01em;
+    padding: 0.8em 1.2em;
+    margin-left: auto;
+    border-radius: 30px;
+  }
+
+  .btn.blue:hover {
+      color: #fff;
+      background-color: #2a5194;
+      border-color: #2a5194;
+  }
+
+  .btn-secondary {
+    background: #4064a8;
+    color: #ffffff;
+  }
 `;
 
 
@@ -47,20 +65,20 @@ class App extends Component {
       super(props);
       this.state = {
         isLogged: false,
-        modal: false,
+        // modal: false,
         buttonLabel: 'Post a Job'
 
       };
       this.handleInputChange = this.handleInputChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
-      this.toggle = this.toggle.bind(this);
+      // this.toggle = this.toggle.bind(this);
   }
 
-  toggle() {
-    this.setState({
-      modal: !this.state.modal
-    });
-  }
+  // toggle() {
+  //   this.setState({
+  //     modal: !this.state.modal
+  //   });
+  // }
 
   handleInputChange(event) {
     const target = event.target;
@@ -91,7 +109,7 @@ class App extends Component {
 
                       />
                       <MainWrapper isLoggedIn = {this.state.isLogged}/>
-                      <PostAJobModal toggle = {this.toggle}/>
+                      {/* <PostAJobModal toggle = {this.toggle}/> */}
                 </div>
           </AppStyles>
       </BrowserRouter>

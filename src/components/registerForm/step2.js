@@ -3,33 +3,6 @@ import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from 're
 import styled from 'styled-components';
 // import FormErrors from './ErrorsForm.js';
 
-const Step2Styles = styled.div`
-
-  .form-control {
-    border-radius: 20px;
-    border: 1px solid #58595b;
-  }
-
-  ${'' /* #fileUploadStep2[type=file] {
-    display:none;
-    margin:10px;
-  }
-  #fileUploadStep2[type=file] + label {
-    display:inline-block;
-    margin: 6px 15px;
-    padding: 4px 32px;
-    background-color: #3863ad;
-    border: solid 1px #666F77;
-    color:#ffffff;
-  }
-  #fileUploadStep2[type=file]:active + label {
-    background-image: none;
-    background-color:#2D6C7A;
-    color:#FFFFFF;
-  }  */}
-
-`;
-
 
 class Step2 extends Component {
   constructor(props) {
@@ -67,7 +40,7 @@ class Step2 extends Component {
   render() {
 
     return (
-      <Step2Styles>
+      <div>
           <h3>Welcome!</h3>
           <Form onSubmit={this.props.handleSubmit}>
             <Row form>
@@ -125,15 +98,15 @@ class Step2 extends Component {
               </Col>
               <Col md={6}>
                   <FormGroup>
-                          <Label for="exampleFile">Upload image</Label>
+                          <Label for="exampleFile" hidden>Upload image</Label>
                           <Input type="file" name="file" id="uploadImage" />
                   </FormGroup>
               </Col>
             </Row>
             <p className="smallPrint">By proceeding beyond this page, I agree to terms and conditions.</p>
-            <Button>Save</Button>
+            <Button className="blue">Save</Button>
           </Form>
-      </Step2Styles>
+      </div>
     );
   }
 }

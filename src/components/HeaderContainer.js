@@ -1,7 +1,7 @@
 import React from 'react';
 // import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, NavLink } from 'reactstrap';
 
 import LoginForm from './login/LoginForm';
 import LoggedIn from './login/LoggedIn';
@@ -10,9 +10,11 @@ const HeaderContainer = (props) => {
 
     return(
      <div className="header-wrapper">
-         <Container>
+         <Container fluid={true}>
              <Row>
-              <Col xs="6" sm="6">Gignav</Col>
+              <Col xs="6" sm="6">
+                  <NavLink href={`/`} active>Gignav</NavLink>
+              </Col>
               <Col xs="6" sm="6">
                   {props.isLoggedIn ?
                        <LoggedIn buttonLabel = {props.buttonLabel}

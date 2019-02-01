@@ -7,14 +7,14 @@ const MainContainer = (props) => {
 
     return(
       <div className="topWrapper>">
-            <Container>
+            <Container fluid={true}>
                 <Row>
-                  <Col xs="6" sm="8">
+                  <Col xs="12" sm="8">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus lorem ut purus ullamcorper hendrerit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam luctus et justo eget posuere. Suspendisse libero est, tincidunt eu velit commodo, sodales consectetur nunc. Morbi mi leo, iaculis sed felis et, pellentesque sagittis dolor. Ut sed sem metus. Donec lobortis vulputate lectus, eget dictum est consequat sit amet. Vivamus vehicula, sapien sagittis rhoncus pharetra, enim velit finibus massa, at placerat lorem neque a libero. Mauris at eros vulputate, condimentum lectus sed, venenatis est. Donec bibendum, eros et suscipit dictum, enim massa bibendum felis, ut sodales odio elit eget augue. Cras imperdiet fermentum blandit. Duis fermentum lacus ligula. Curabitur pulvinar sit amet diam dictum dapibus. Aenean ac tincidunt nisi.
                       </p>
                   </Col>
-                  <Col sm="4"><RegisterForm/></Col>
+                  <Col xs="12" sm="4"><RegisterForm/></Col>
                 </Row>
            </Container>
       </div>

@@ -5,15 +5,33 @@ import styled from 'styled-components';
 // import './css/index.css';
 
 const LoggedInStyles = styled.div`
-    ${'' /* a {
-        color: rgba(255,255,255, 0.7);
-        float: right;
+    .loggedin {
+        border-bottom: none;
+        justify-content: flex-end;
     }
 
-    a:hover {
-        color: rgba(255,255,255, 1);
-    } */}
+    .loggedin .nav-link {
+        color:rgba(255,255,255, 0.7);
+    }
 
+    .loggedin .nav-link:hover {
+        color:rgba(255,255,255, 1);
+        border-radius: 25px;
+    }
+
+    .loggedin .dropdown.nav-item {
+        border: 1px solid rgba(255,255,255, 0.7);
+        border-radius: 25px;
+    }
+
+    .loggedin .nav-tabs .nav-item.show .nav-link {
+        border-radius: 25px;
+    }
+
+    .accDrop .nav-item {
+        margin: 0.8em 0.2em 0.8em 0.8em;
+        color: #4064a8;
+    }
 `
 
 class LoggedIn extends Component {
@@ -34,20 +52,16 @@ class LoggedIn extends Component {
 
     render(){
         return (
-      <LoggedInStyles className="user loggedin">
-        {/* <NavLink to={`/account`}>My Account</NavLink> */}
-        {/* <NavLink to={`/#post-a-job`}>Post a job</NavLink> */}
-        {/* <Button onClick={props.onClick}>{props.buttonLabel}</Button> */}
-        {/* <PostAJobModal toggle = {this.toggle}/> */}
-        <Nav tabs>
+      <LoggedInStyles className="user">
+        <Nav tabs className="loggedin">
           <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
             <DropdownToggle nav caret>
               My Account
             </DropdownToggle>
-            <DropdownMenu>
+            <DropdownMenu className="accDrop">
                 <Nav className="flex-column">
                     <NavItem>
-                        <NavLink to={`/account`}>Dashboard</NavLink>
+                        <NavLink to={`/dashboard`}>Dashboard</NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink to={`/settings`}>Settings</NavLink>

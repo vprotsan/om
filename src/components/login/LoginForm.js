@@ -1,13 +1,38 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 // import './css/index.css';
+
+const LoginFormStyles = styled.div`
+    .loginForm .white.btn {
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      border-radius: 20px;
+    }
+
+    .loginForm {
+      justify-content: flex-end;
+    }
+
+    .loginForm .form-control {
+      border: 0px;
+      border-radius: 20px;
+    }
+
+    .loginForm .form-group,
+    .loginForm .white.btn {
+      margin-left: 0.6em;
+    }
+`;
+
+
 
 const LoginForm = (props) => {
 
     return (
-
-        <Form inline onSubmit={props.handleSubmit}>
+      <LoginFormStyles>
+        <Form inline onSubmit={props.handleSubmit} className="loginForm">
             <FormGroup>
               <Label for="exampleEmail" hidden>Email</Label>
               <Input
@@ -30,8 +55,9 @@ const LoginForm = (props) => {
                     onChange={props.handleInputChange}/>
             </FormGroup>
             {' '}
-            <Button type="submit" value="Login">Login</Button>
+            <Button type="submit" value="Login" className="white">Login</Button>
         </Form>
+      </LoginFormStyles>
     )
 }
 

@@ -6,9 +6,10 @@ body {
   color:#212428;
 }
 
-.form-control {
+.form-control,
+.custom-select {
   border-radius: 20px;
-  border: 1px solid #58595b;
+  border: 1px solid #bfbfbf;
 }
 
 .header-wrapper {
@@ -17,11 +18,24 @@ body {
 }
 
 .main-content-wrapper {
-  padding: 3em 0 5em;;
+  padding: 3em 10% 5em;;
 }
 
 .btn.btn-secondary {
   border: 1px solid #ffffff;
+}
+
+.btn.blue {
+  font-size: 1.01em;
+  padding: 0.8em 1.2em;
+  margin-left: auto;
+  border-radius: 30px;
+}
+
+.btn.blue:hover {
+    color: #fff;
+    background-color: #2a5194;
+    border-color: #2a5194;
 }
 
 /* .input {

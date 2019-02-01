@@ -4,13 +4,6 @@ import Step1 from './step1.js';
 import Step2 from './step2.js';
 import styled from 'styled-components';
 
-const RegisterWrapperStyles = styled.div`
-  .form-control {
-    border-radius: 20px;
-    border: 1px solid #58595b;
-  }
-
-`
 
 class RegisterForm extends React.Component {
   constructor(props) {
@@ -60,11 +53,9 @@ class RegisterForm extends React.Component {
                         :
                         <Step1 handleSubmit={this.submitStepOne}/>
     return (
-      <RegisterWrapperStyles>
           <div className="registerWrapper">
               { formToShow }
           </div>
-      </RegisterWrapperStyles>
     );
   }
 }

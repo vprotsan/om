@@ -6,60 +6,7 @@
 }
 
 .registerWrapper h3 {
-  padding-bottom: 1.2em;
-  font-size: 1.2em;
-}
-
-.registerWrapper label {
-  display: none;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.row.last {
-  justify-content: flex-end;
-}
-
-.input {
-  margin-top: 1em;
-}
-
-.column{
-  display: flex;
-  flex-direction: column;
-}
-
-.btn.blue {
-  font-size:1.01em;
-  padding-top: 0.8em;
-  float: right;
-}
-
-.input.btn.blue {
-  border-radius: 30px;
-  margin-top: 0.5em;
-}
-
-.panel {
-  position: relative;
-}
-
-.formErrors {
-  position: absolute;
-  top: -17px;
-  left: 0;
-}
-
-.formErrors p {
-  color: red;
-  font-size: 0.8em;
-}
-
-.smallPrint {
-  font-size: 0.8em;
-  color: #383838;
-  padding: 0.8em 0.2em;
+  padding-bottom: 0.8em;
+  font-size: 1.5em;
+  color: #1f3d71;
 }
