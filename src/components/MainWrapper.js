@@ -3,8 +3,6 @@ import { Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
-
 import MainContainer from './MainContainer';
 import JobFormPage from './jobForm/jobFormPage';
 import Dashboard from './myaccount/dashboard';
@@ -18,10 +16,8 @@ const MainWrapper = (props) => (
       <Container fluid={true}>
               <Switch>
                   <Route exact path="/" component={ MainContainer }/>
-                  {/* for demontration */}
                   <Route exact path="/dashboard" component={ Dashboard }/>
                   <Route exact path="/post-a-job" component={ JobFormPage }/>
-                  {/* END for demontration */}
                   {props.isLoggedIn ?
                     <Route path="/settings" component={Account}/> :
                     ""

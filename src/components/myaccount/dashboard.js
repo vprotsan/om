@@ -1,7 +1,6 @@
 import React from 'react';
-import { Route, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { Nav, NavItem, Button } from 'reactstrap';
 
 
 const DashStyles = styled.div`

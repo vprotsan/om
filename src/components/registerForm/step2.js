@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input, CustomInput } from 'reactstrap';
 import styled from 'styled-components';
-// import FormErrors from './ErrorsForm.js';
+
+const Step2Styles = styled.div`
+    textarea.form-control {
+      min-height: 115px;
+    }
+`;
 
 
 class Step2 extends Component {
@@ -40,7 +45,7 @@ class Step2 extends Component {
   render() {
 
     return (
-      <div>
+      <Step2Styles>
           <h3>Welcome!</h3>
           <Form onSubmit={this.props.handleSubmit}>
             <Row form>
@@ -77,7 +82,7 @@ class Step2 extends Component {
               <Col md={12}>
                   <FormGroup>
                       <Label for="exampleText" hidden>Text Area</Label>
-                      <Input type="textarea" name="text" id="exampleText" row="5"/>
+                      <Input type="textarea" name="text" id="exampleText" row="7"/>
                   </FormGroup>
                 </Col>
             </Row>
@@ -106,7 +111,7 @@ class Step2 extends Component {
             <p className="smallPrint">By proceeding beyond this page, I agree to terms and conditions.</p>
             <Button className="blue">Save</Button>
           </Form>
-      </div>
+      </Step2Styles>
     );
   }
 }

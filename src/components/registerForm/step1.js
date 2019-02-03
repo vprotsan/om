@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
-import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Col, Row, Button, Form, FormGroup, Label, Input, Datepicker } from 'reactstrap';
 import FormErrors from './ErrorsForm.js';
+import styled from 'styled-components';
 
 import './css/index.css';
 
+const Step1Styles = styled.div`
+    #dob[type="date"]:before {
+      content: attr(placeholder) !important;
+      color: #aaa;
+      margin-right: 0.5em;
+    }
+    #dob[type="date"]:focus:before,
+    #dob[type="date"]:valid:before {
+      content: "";
+    }
+`;
 
 class Step1 extends Component {
+
+  onFocus(e){
+      e.currentTarget.type = "date";
+  }
+
+  onBlur(e){
+      e.currentTarget.type = "text";
+      e.currentTarget.placeholder = "Enter a Date";
+  }
 
   constructor(props) {
     super(props);
@@ -102,11 +123,11 @@ class Step1 extends Component {
                   <Row form>
                     <Col md={6}>
                       <FormGroup>
-                        <Label for="phone" hidden>Phone or Email</Label>
-                        <Input type="number"
+                        <Label for="phone" hidden>Phone</Label>
+                        <Input type="text"
                                name="phone"
                                id="phone"
-                               placeholder="Phone or Email"
+                               placeholder="Phone"
                                value={this.state.phone}
                                onChange={this.onChange} />
                       </FormGroup>
@@ -127,12 +148,14 @@ class Step1 extends Component {
                       <Col md={6}>
                         <FormGroup>
                           <Label for="dob" hidden>Date of Birth</Label>
-                          <Input type="date"
+                          <Input type="text"
                                  name="dob"
                                  id="dob"
                                  placeholder="Date of Birth"
                                  value={this.state.dob}
-                                 onChange={this.onChange} />
+                                 onChange={this.onChange}
+                                 onFocus={this.onFocus}
+                                 onBlur={this.onBlur} />
                         </FormGroup>
                       </Col>
                   </Row>
