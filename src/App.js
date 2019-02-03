@@ -7,7 +7,6 @@ import MainWrapper from './components/MainWrapper';
 import PropTypes from 'prop-types';
 
 import './css/reset.css';
-// import './css/global.css';
 
 const AppStyles = styled.div`
 
@@ -64,20 +63,12 @@ class App extends Component {
       super(props);
       this.state = {
         isLogged: false,
-        // modal: false,
         buttonLabel: 'Post a Job'
 
       };
       this.handleInputChange = this.handleInputChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
-      // this.toggle = this.toggle.bind(this);
   }
-
-  // toggle() {
-  //   this.setState({
-  //     modal: !this.state.modal
-  //   });
-  // }
 
   handleInputChange(event) {
     const target = event.target;
