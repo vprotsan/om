@@ -35,26 +35,38 @@ const MyAccContStyles = styled.div`
 
 `;
 
-const Account = ({match}) => (
-          <MyAccContStyles className="containerMyAccount">
-              <div className="my-account-header group">
-                    <Nav tabs>
-                        <NavItem>
-                            <NavLink to={`${match.url}/security`} active>Security</NavLink>
-                        </NavItem>
-                        <NavItem>
-                          <NavLink to={`${match.url}/data`}>Data</NavLink>
-                        </NavItem>
-                        <NavItem>
-                          <NavLink to={`${match.url}/notifications`}>Notifications</NavLink>
-                        </NavItem>
-                    </Nav>
-              </div>
+class Account extends React.Component{
 
-              <Route exact path={`${match.path}/security`} render={ () => <LoginSecurity />}/>
-              <Route exact path={`${match.path}/data`} render={ () => <Data />}/>
-              <Route exact path={`${match.path}/notifications`} render={ () => <Notifications />}/>
-          </MyAccContStyles>
-)
+  constructor(props) {
+    super(props);
+  }
+
+  render(){
+
+    const { to, staticContext, ...rest } = this.props;
+
+    return(
+      <MyAccContStyles className="containerMyAccount" {...this.props}>
+          <div className="my-account-header group">
+                <Nav tabs>
+                    <NavItem>
+                        <NavLink to={`${this.props.match.url}/security`} active={this.props}>Security</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink to={`${this.props.match.url}/data`}>Data</NavLink>
+                    </NavItem>
+                    <NavItem>
+                      <NavLink to={`${this.props.match.url}/notifications`}>Notifications</NavLink>
+                    </NavItem>
+                </Nav>
+          </div>
+
+          <Route exact path={`${this.props.match.path}/security`} render={ () => <LoginSecurity />}/>
+          <Route exact path={`${this.props.match.path}/data`} render={ () => <Data />}/>
+          <Route exact path={`${this.props.match.path}/notifications`} render={ () => <Notifications />}/>
+      </MyAccContStyles>
+    )
+  }
+}
 
 export default Account;
